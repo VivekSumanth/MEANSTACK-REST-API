@@ -1,0 +1,15 @@
+version: '2' # specify docker-compose version
+# Define the services/containers to be run
+services:
+  client: #name of the first service
+    build: client # specify the directory of the Dockerfile
+    ports:
+      - "4200:4200" # specify port forewarding
+    container_name: containerclient-
+    restart: always
+  server: #name of the second service
+    build: server # specify the directory of the Dockerfile
+    ports:
+      - "3306:3306" #specify ports forewarding
+    container_name: server-container
+    restart: always
