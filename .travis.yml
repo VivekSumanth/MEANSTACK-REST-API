@@ -1,5 +1,16 @@
 sudo: required
 services:
   - docker
-script:
-  - docker-compose up
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "viveksumanth-react"
+  env: "Viveksumanthreact-env"
+  bucket_name: "elasticbeanstalk-us-east-1-619136999579"
+  bucket_path: "viveksumanth-react"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_key_id:
+    secure: "AWS_SECRET_KEY"
