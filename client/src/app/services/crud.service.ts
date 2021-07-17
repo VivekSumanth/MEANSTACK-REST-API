@@ -10,7 +10,7 @@ import { Book } from '../models/Book';
 export class CrudService {
 
   // Node/Express API
-  REST_API: string = 'http://localhost:3306/books';
+  REST_API: string = 'http://localhost:5000/books';
 
   // Http Header
   httpHeaders = new HttpHeaders().set('Content-Type', 'application/json');
@@ -19,7 +19,7 @@ export class CrudService {
 
   // Add
   AddBook (data: Book): Observable<any> {
-
+    console.log("crud service" + data)
     return this.httpClient.post(this.REST_API, data)
       .pipe(
         catchError(this.handleError)

@@ -28,6 +28,7 @@ export class AddBookComponent implements OnInit {
 
 
   onSubmit(): any {
+    console.log(this.bookForm.value)
     this.crudService.AddBook(this.bookForm.value)
     .subscribe(() => {
         console.log('Data added successfully!')

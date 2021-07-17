@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../../services/crud.service';
 
 @Component({
-  selector: 'app-books-list',
+  selector: 'books-list',
   templateUrl: './books-list.component.html',
   styleUrls: ['./books-list.component.scss']
 })
@@ -15,6 +15,7 @@ export class BooksListComponent implements OnInit {
   ngOnInit(): void {
 
     this.crudService.GetBooks().subscribe(res => {
+      console.log('hey')
       console.log(res)
       this.Books =res;
     });

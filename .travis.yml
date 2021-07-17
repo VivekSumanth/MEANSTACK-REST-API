@@ -1,8 +1,7 @@
 sudo: required
 services:
   - docker
-before_install:
-  - gem install rake
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
