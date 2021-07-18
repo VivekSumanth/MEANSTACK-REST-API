@@ -1,0 +1,15 @@
+FROM node:alpine
+
+WORKDIR /usr/app
+
+COPY /package.json .
+
+RUN npm install -g npm@7.20.0
+
+RUN npm install -g @angular/cli@11.2.3
+
+COPY . .
+
+EXPOSE 4200
+
+CMD ng serve --host 0.0.0.0 --disable-host-check
