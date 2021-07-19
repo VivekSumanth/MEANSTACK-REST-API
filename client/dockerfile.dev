@@ -4,9 +4,12 @@ RUN apk add chromium
 
 WORKDIR /usr/app
 
+# add `/app/node_modules/.bin` to $PATH
+ENV PATH /app/node_modules/.bin:$PATH
+
 ENV CHROME_BIN=/usr/bin/chromium-browser
 
-COPY /package.json .
+COPY /package.json /app/package.json
 
 RUN npm install -g npm@7.20.0
 
