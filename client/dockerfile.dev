@@ -1,6 +1,10 @@
 FROM node:alpine
 
+RUN apk add chromium
+
 WORKDIR /usr/app
+
+ENV CHROME_BIN=/usr/bin/chromium-browser
 
 COPY /package.json .
 
