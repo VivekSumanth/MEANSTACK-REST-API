@@ -20,7 +20,7 @@ phases:
       - echo Build started on `date`
       # Run tests with built Docker images
       - echo Run client tests...
-      - docker run -e CI=true viveksumanth/client-test ng test -- --coverage
+      - docker run -e CI=true viveksumanth/client-test ng test --watch=false
       # - echo Run nodejs tests...
       # - docker run -e CI=true lukondefmwila/nodejs-test
       # Scan Docker image with Snyk
