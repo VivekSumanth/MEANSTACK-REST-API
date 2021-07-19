@@ -10,7 +10,7 @@ COPY /package.json .
 
 RUN npm install -g npm@7.20.0
 
-RUN npm install -g @angular/cli@11.2.3
+RUN npm install -g @angular/cli@12.1.2
 
 COPY . .
 
