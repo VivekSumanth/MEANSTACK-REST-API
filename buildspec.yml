@@ -37,8 +37,8 @@ phases:
       # Build the Docker images
       - echo Building the production Docker image...
       - docker build -t viveksumanth/docker-multicontainer-app-client ./client
-      - docker build -t viveksumanth/docker-multicontainer-app-server ./server
       - docker build -t viveksumanth/docker-multicontainer-app-nginx ./nginx
+      - docker build -t viveksumanth/docker-multicontainer-app-server ./server
       # Log in to the Docker CLI
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   post_build:
@@ -46,5 +46,6 @@ phases:
       # Take these images and push them to Docker hub
       - echo Pushing the Docker images...
       - docker push viveksumanth/docker-multicontainer-app-client 
-      - docker push viveksumanth/docker-multicontainer-app-server 
       - docker push viveksumanth/docker-multicontainer-app-nginx 
+      - docker push viveksumanth/docker-multicontainer-app-server 
+      
