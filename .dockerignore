@@ -8,5 +8,4 @@ docker-compose*
 .gitignore
 README.md
 LICENSE
-.vscode
-.DS_Store
+
