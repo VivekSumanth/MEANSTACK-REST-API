@@ -36,9 +36,15 @@ phases:
       # - ./snyk monitor --docker lukondefmwila/nodejs-test:latest --file=./backend/Dockerfile.dev
       # Build the Docker images
       - echo Building the production Docker image...
-      - docker build -t viveksumanth/docker-multicontainer-app-client ./client/
-      - docker build -t viveksumanth/docker-multicontainer-app-nginx ./nginx/
-      - docker build -t viveksumanth/docker-multicontainer-app-server ./server/
+      - cd client
+      - docker build -t viveksumanth/docker-multicontainer-app-client .
+      - cd ..
+      - cd nginx
+      - docker build -t viveksumanth/docker-multicontainer-app-nginx .
+      - cd ..
+      - cd server
+      - docker build -t viveksumanth/docker-multicontainer-app-server .
+      - cd ..
       # Log in to the Docker CLI
       - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   post_build:
