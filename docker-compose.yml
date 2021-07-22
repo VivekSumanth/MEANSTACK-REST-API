@@ -22,11 +22,11 @@ services:
             - /usr/app/node_modules
             - ./server:/usr/app
         environment: 
-            - PGUSER=postgres
-            - PGHOST=postgres
-            - PGDATABASE=postgres
-            - PGPASSWORD=postgres_password
-            - PGPORT=5432
+            - pgUser=postgres
+            - pgHost=localhost
+            - pgDatabase=Books
+            - pgPassword=postgres
+            - pgPort=5432
     client:
         build:
             dockerfile: dockerfile.dev
