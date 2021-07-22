@@ -1,6 +1,6 @@
 {
-	"AWSEBDockerrunVersion": 2,
-	"containerDefinations": [{
+	"AWSEBDockerrunVersion": 3,
+	"containerDefinitions": [{
 			"name": "client",
 			"image": "viveksumanth/docker-multicontainer-app-client",
 			"hostname": "client",
