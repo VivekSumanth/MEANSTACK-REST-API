@@ -48,4 +48,8 @@ phases:
       - docker push viveksumanth/docker-multicontainer-app-client 
       - docker push viveksumanth/docker-multicontainer-app-nginx 
       - docker push viveksumanth/docker-multicontainer-app-server 
+artifacts:
+  files:
+    - '**/*'
+  name: MEANSTACK-REST-API-Artifacts  
       
