@@ -5,14 +5,14 @@
 			"image": "viveksumanth/docker-multicontainer-app-client",
 			"hostname": "client",
 			"essential": false,
-			"memory": 500
+			"memory": 350
 		},
 		{
 			"name": "server",
 			"image": "viveksumanth/docker-multicontainer-app-server",
 			"hostname": "api",
 			"essential": false,
-			"memory": 500
+			"memory": 250
 		},
 		{
 			"name": "nginx",
