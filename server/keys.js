@@ -1,11 +1,13 @@
 module.exports = {
-    pgUser: 'postgres',
-    pgHost: 'localhost',
-    pgDatabase:'Books',
-    pgPassword: 'postgres',
-    pgPort: 5432,
+    pgUser: process.env.pgUser,
+    pgHost: process.env.pgHost,
+    pgDatabase: process.env.pgDatabase,
+    pgPassword: process.env.pgPassword,
+    pgPort: process.env.pgPort,
   };
 
+
+  
   // module.exports = {
   //   redisHost: process.env.REDIS_HOST,
   //   redisPort: process.env.REDIS_PORT,
